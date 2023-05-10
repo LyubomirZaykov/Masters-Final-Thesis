@@ -1,0 +1,10 @@
+function [images]=nameExtract(length,directory,nam)
+vector=string.empty;
+dirName=directory.name;
+for i=1:length
+   currentImageName=fullfile(dirName,directory(i).name);
+   currName=string(currentImageName);
+   vector(i)=currName;
+end
+images=vector;
+end

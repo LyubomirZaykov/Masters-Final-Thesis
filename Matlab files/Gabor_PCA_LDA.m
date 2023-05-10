@@ -11,7 +11,9 @@ Tilia=struct('Name','Tilia','Photo',{'Linden\Tilia1.jpg';'Linden\Tilia2.jpg';'Li
     'Linden\Tilia24.jpg';'Linden\Tilia25.jpg';'Linden\Tilia26.jpg';'Linden\Tilia27.jpg';...
     'Linden\Tilia28.jpg';'Linden\Tilia29.jpg';'Linden\Tilia30.jpg';'Linden\Tilia31.jpg';...
     'Linden\Tilia32.jpg';'Linden\Tilia33.jpg';'Linden\Tilia34.jpg';'Linden\Tilia35.jpg'},...
-             'AverageSize',32,'SizeCategory','M');
+             'AverageSize',{42.81;45.07;43.7;43.59;44.03;41.21;34.75;34.76;33.97;35.39;35.58;...
+             34.68;35.43;34.6;36.25;35.17;33.23;34.28;35.77;29.29;33.86;28.43;31.35;33.57;33.81;...
+             34.87;38.03;34.59;36.25;35.66;33.15;34.53;34.54;33.18;36.75},'SizeCategory','M');
 Acacia=struct('Name','Acacia','Photo',{'Acacia\Acacia1.jpg';'Acacia\Acacia2.jpg';'Acacia\Acacia3.jpg';...
     'Acacia\Acacia4.jpg';'Acacia\Acacia5.jpg';'Acacia\Acacia6.jpg';'Acacia\Acacia7.jpg';...
     'Acacia\Acacia8.jpg';'Acacia\Acacia9.jpg';'Acacia\Acacia10.jpg';'Acacia\Acacia11.jpg';...
@@ -21,7 +23,9 @@ Acacia=struct('Name','Acacia','Photo',{'Acacia\Acacia1.jpg';'Acacia\Acacia2.jpg'
     'Acacia\Acacia24.jpg';'Acacia\Acacia25.jpg';'Acacia\Acacia26.jpg';'Acacia\Acacia27.jpg';...
     'Acacia\Acacia28.jpg';'Acacia\Acacia29.jpg';'Acacia\Acacia30.jpg';'Acacia\Acacia31.jpg';...
     'Acacia\Acacia32.jpg';'Acacia\Acacia33.jpg';'Acacia\Acacia34.jpg';'Acacia\Acacia35.jpg'},...
-    'AverageSize',30,'SizeCategory','M');
+    'AverageSize',{33.13;29.3;31.49;32.38;30.63;29.62;30.77;32.93;33.09;33.24;32.65;33.11;32.46;...
+    33;32.05;32.47;31.9;31.42;32.43;33.03;34.18;33.6;33.52;35.11;28.55;33.54;34.95;31.88;30.36;32.17;...
+    30.97;31.35;34;28.89;31.84},'SizeCategory','M');
 Lavender=struct('Name','Lavender','Photo',{'Lavender\Lav1.jpg';'Lavender\Lav2.jpg';...
     'Lavender\Lav3.jpg';'Lavender\Lav4.jpg';'Lavender\Lav5.jpg';'Lavender\Lav6.jpg';...
     'Lavender\Lav7.jpg';'Lavender\Lav8.jpg';'Lavender\Lav9.jpg';'Lavender\Lav10.jpg';...
@@ -31,7 +35,9 @@ Lavender=struct('Name','Lavender','Photo',{'Lavender\Lav1.jpg';'Lavender\Lav2.jp
     'Lavender\Lav23.jpg';'Lavender\Lav24.jpg';'Lavender\Lav25.jpg';'Lavender\Lav26.jpg';...
     'Lavender\Lav27.jpg';'Lavender\Lav28.jpg';'Lavender\Lav29.jpg';'Lavender\Lav30.jpg';...
     'Lavender\Lav31.jpg';'Lavender\Lav32.jpg';'Lavender\Lav33.jpg';'Lavender\Lav34.jpg';...
-    'Lavender\Lav35.jpg'},'AverageSize',37,'SizeCategory','M');
+    'Lavender\Lav35.jpg'},'AverageSize',{40.87;37.79;39.39;35.48;36.68;33.95;36.18;35.48;37.34;...
+    37.02;36.98;35.93;36.34;37.16;37.84;40.79;37.6;36.06;35.03;38.81;35.93;41.18;36.07;37.44;36.03;...
+    36.64;35.45;34.88;40.67;40.59;38.55;35.788;35.705;36.147;35.59},'SizeCategory','M');
 Canola=struct('Name','Brassica','Photo',{'Canola\Rapa1.jpg';'Canola\Rapa2.jpg';'Canola\Rapa3.jpg';...
     'Canola\Rapa4.jpg';'Canola\Rapa5.jpg';'Canola\Rapa6.jpg';'Canola\Rapa7.jpg';'Canola\Rapa8.jpg';...
     'Canola\Rapa9.jpg';'Canola\Rapa10.jpg';'Canola\Rapa11.jpg';'Canola\Rapa12.jpg';'Canola\Rapa13.jpg';...
@@ -39,7 +45,9 @@ Canola=struct('Name','Brassica','Photo',{'Canola\Rapa1.jpg';'Canola\Rapa2.jpg';'
     'Canola\Rapa19.jpg';'Canola\Rapa20.jpg';'Canola\Rapa21.jpg';'Canola\Rapa22.jpg';'Canola\Rapa23.jpg';...
     'Canola\Rapa24.jpg';'Canola\Rapa25.jpg';'Canola\Rapa26.jpg';'Canola\Rapa27.jpg';'Canola\Rapa28.jpg';...
     'Canola\Rapa29.jpg';'Canola\Rapa30.jpg';'Canola\Rapa31.jpg';'Canola\Rapa32.jpg';'Canola\Rapa33.jpg';...
-    'Canola\Rapa34.jpg';'Canola\Rapa35.jpg'},'AverageSize',27,'SizeCategory','M');
+    'Canola\Rapa34.jpg';'Canola\Rapa35.jpg'},'AverageSize',{33.3;28.13;30.36;33.3;31.24;30.52;28.6;28.38;...
+    27.64;29.79;28.87;29.62;29.39;29.09;28.9;29.28;28.39;28.35;27.6;28.88;29.07;29;28.23;29.01;29.58;28.94;...
+    29.51;29.05;28.71;29.2;28.91;28.4;32.015;32.318;30.799},'SizeCategory','M');
 Thistle=struct('Name','Thistle','Photo',{'Thistle\MBod1.jpg';'Thistle\MBod2.jpg';'Thistle\MBod3.jpg';...
     'Thistle\MBod4.jpg';'Thistle\MBod5.jpg';'Thistle\MBod6.jpg';'Thistle\MBod7.jpg';'Thistle\MBod8.jpg';...
     'Thistle\MBod9.jpg';'Thistle\MBod10.jpg';'Thistle\MBod11.jpg';'Thistle\MBod12.jpg';'Thistle\MBod13.jpg';...
@@ -47,7 +55,9 @@ Thistle=struct('Name','Thistle','Photo',{'Thistle\MBod1.jpg';'Thistle\MBod2.jpg'
     'Thistle\MBod19.jpg';'Thistle\MBod20.jpg';'Thistle\MBod21.jpg';'Thistle\MBod22.jpg';'Thistle\MBod23.jpg';...
     'Thistle\MBod24.jpg';'Thistle\MBod25.jpg';'Thistle\MBod26.jpg';'Thistle\MBod27.jpg';'Thistle\MBod28.jpg';...
     'Thistle\MBod29.jpg';'Thistle\MBod30.jpg';'Thistle\MBod31.jpg';'Thistle\MBod32.jpg';'Thistle\MBod33.jpg';...
-    'Thistle\MBod34.jpg';'Thistle\MBod35.jpg'},'AverageSize',38,'SizeCategory','M');
+    'Thistle\MBod34.jpg';'Thistle\MBod35.jpg'},'AverageSize',{50.37;50.71;51.32;51.88;47.08;47.04;48.42;55;...
+    55.87;57.58;48.397;48.765;62.521;45.87;45.838;40.612;46.173;46.41;46.85;46.064;46.03;44.98;50.223;52.278;...
+    47.339;47.285;45.52;45.293;48.9;46.108;51.288;50.287;49.162;47.32;48.271},'SizeCategory','M');
 Pollens = [Tilia; Acacia; Lavender; Canola; Thistle];
 %Pollens = [Tilia; Acacia; LavenderAngusti; LavenderMultifida];
 %%Pollens = [Tilia; Acacia; Brassica];
@@ -59,8 +69,8 @@ gaborArray = gabor([4 8],[0 45 90 135]);
 for it=1:nPatterns
     I = imread(Pollens(it).Photo);
     I = rgb2gray(I);
-    Inorm=PhotoNorm01(I); % Normalized image between [0; 1]
-    Inorm=2.*(Inorm-0.5);  % Normalized image between [-1; 1]
+%     Inorm=PhotoNorm01(I); % Normalized image between [0; 1]
+%     Inorm=2.*(Inorm-0.5);  % Normalized image between [-1; 1]
 
     % -------------Normalization of image (100 pxels)------------
     nxPixel=size(I,2); nyPixel=size(I,1);
@@ -81,6 +91,7 @@ for it=1:nPatterns
 
     % ------------- Gabor filter parameters --------------
     I2 = I100;
+    
     gaborMag_Bank = imgaborfilt(I2,gaborArray);
 
     % ---------------Down-samples (30x30 pxels)----------------
@@ -90,12 +101,12 @@ for it=1:nPatterns
     deltaXI30=XXImax./nXI30; deltaYI30=YYImax./nYI30;
     [XXI30,YYI30] = meshgrid(1:deltaXI30:XXImax,1:deltaYI30:YYImax);
     gaborMag_Bank30=zeros(nYI30,nXI30,nBank);
-    for p = 1:8, %nBank=8?
+    for p = 1:8 %nBank=8?
         gaborMag_Bank30(:,:,p) = interp2(XXI,YYI,gaborMag_Bank(:,:,p),XXI30,YYI30,'cubic'); 
     end
 
-    % -------Features extraction and down-samples (30x30 pxels)--------
-    Features2=zeros(nBank,nXI30.*nYI30+2);
+    % -------Features extraction and down-samples (30x30 pixels)--------
+    Features2=zeros(nBank,nXI30.*nYI30+2);%Ne vijdam smisula vuv Feature2?
     Features=[];
     for p = 1:8
         Features1=[];
@@ -105,17 +116,19 @@ for it=1:nPatterns
             end
         end
         theta = gaborArray(p).Orientation;
-        lambda = gaborArray(p).Wavelength;
+        lambda = gaborArray(p).Wavelength; 
         Features1=[Features1 theta lambda];
-        Features2(p,:)=Features1;
+        Features2(p,:)=Features1; %Ne vijdam smisula vuv Feature2?
         Features=[Features Features1];
     end
     
   
-    % Take into accout pollen size - add size with weighted frequence coefficient - 5% from Features volume
-    PollenSize_WeightedFreq=Pollens(it).AverageSize.*ones(1,ceil(0.05.*size(Features,2)));
+    % Take into account pollen size - add size with weighted frequence coefficient - 5% from Features volume
+%   PollenSize_WeightedFreq=Pollens(it).AverageSize.*ones(1,ceil(0.05.*size(Features,2)));
+    pollenSize=Pollens(it).AverageSize; %Take into account every individual pole size and add it as a Feature
     PollenFeatures(it)=struct('Name',Pollens(it).Name,...
-                       'GaborFeatures_and_size',[Features  PollenSize_WeightedFreq]);
+                       'GaborFeatures_and_size',[Features pollenSize]);
+%     'GaborFeatures_and_size',[Features  PollenSize_WeightedFreq]);
     
     clear I Inorm nxPixel nyPixel xx yy nXI nYI deltaXI deltaYI XXI YYI I2 I100 
     clear gaborMag_Bank ny100 nx100 nBank XXImax YYImax nXI30 nYI30 deltaXI30 deltaYI30 
@@ -149,23 +162,23 @@ TitlePollens={'Tilia1';'Tilia2';'Tilia3';'Tilia4';'Tilia5';'Tilia6';'Tilia7';'Ti
 'MBod11';'MBod12';'MBod13';'MBod14';'MBod15';'MBod16';'MBod17';'MBod18';'MBod19';...
 'MBod20';'MBod21';'MBod22';'MBod23';'MBod24';'MBod25';'MBod26';'MBod27';'MBod28';...
 'MBod29';'MBod30';'MBod31';'MBod32';'MBod33';'MBod34';'MBod35'};
-TitlePollens=TitlePollens(1:nPatterns,:);  
-
+TitlePollens=TitlePollens(1:nPatterns,:);  %Tova ne razbiram zashto e nujno???
 PollenValues=[];
 for it=1:nPatterns
     PollenValues=[PollenValues;PollenFeatures(it).GaborFeatures_and_size]; %Features fom Gabor Bank
 end
-         
+% [U, Z]=pca(PollenValues,'NumComponents',2);
+% scatter(Z(:,1), Z(:,2),20,'filled');
 mapcaplot(PollenValues,TitlePollens)
 [pc, zscores, pcvars] = pca(PollenValues);
 Nvar=pcvars./sum(pcvars) * 100;
 Ncum=cumsum(pcvars./sum(pcvars) * 100);
              
 figure
-xAcacia=[]; yAcacia=[];  zAcacia=[];     xTilia=[]; yTilia=[]; zTilia=[]; 
-xLavandulaAngustifolia=[];  yLavandulaAngustifolia=[]; zLavandulaAngustifolia=[];
-xLavandulaMultifida=[];     yLavandulaMultifida=[];    zLavandulaMultifida=[];
-xBrassica=[]; yBrassica=[]; zBrassica=[]; xCirsium=[]; yCirsium=[]; zCirsium=[]; 
+xAcacia=[]; yAcacia=[];  zAcacia=[]; xTilia=[]; yTilia=[]; zTilia=[]; 
+xLavender=[];  yLavender=[]; zLavender=[];
+% xLavandulaMultifida=[];     yLavandulaMultifida=[];    zLavandulaMultifida=[];
+xBrassica=[]; yBrassica=[]; zBrassica=[]; xThistle=[]; yThistle=[]; zThistle=[]; 
 for i=1:nPatterns
     if find(strcmp(PollenFeatures(i).Name,'Acacia')) 
         xAcacia=[xAcacia, zscores(i,1)]; yAcacia=[yAcacia, zscores(i,2)]; 
@@ -176,9 +189,9 @@ for i=1:nPatterns
         zTilia=[zTilia, zscores(i,3)];         
 
     elseif find(strcmp(PollenFeatures(i).Name,'Lavender')) 
-        xLavandulaAngustifolia=[xLavandulaAngustifolia, zscores(i,1)]; 
-        yLavandulaAngustifolia=[yLavandulaAngustifolia, zscores(i,2)];  
-        zLavandulaAngustifolia=[zLavandulaAngustifolia, zscores(i,3)];
+        xLavender=[xLavender, zscores(i,1)]; 
+        yLavender=[yLavender, zscores(i,2)];  
+        zLavender=[zLavender, zscores(i,3)];
 
     
     elseif find(strcmp(PollenFeatures(i).Name,'Brassica')) 
@@ -186,17 +199,17 @@ for i=1:nPatterns
         zBrassica=[zBrassica, zscores(i,3)];        
 
     elseif find(strcmp(PollenFeatures(i).Name,'Thistle')) 
-        xCirsium=[xCirsium, zscores(i,1)]; yCirsium=[yCirsium, zscores(i,2)];  
-        zCirsium=[zCirsium, zscores(i,3)];      
+        xThistle=[xThistle, zscores(i,1)]; yThistle=[yThistle, zscores(i,2)];  
+        zThistle=[zThistle, zscores(i,3)];      
            
     end
 end
 plot(xAcacia,yAcacia,'bo','MarkerFaceColor','b'), hold on,
 plot(xTilia,yTilia,'g^','MarkerFaceColor','g'), hold on,
-plot(xLavandulaAngustifolia,yLavandulaAngustifolia,'m>','MarkerFaceColor','m'), hold on
+plot(xLavender,yLavender,'m>','MarkerFaceColor','m'), hold on
 %plot(xBrassica,yBrassica,'ks','MarkerFaceColor','y'), hold on,
 plot(xBrassica,yBrassica,'cs','MarkerFaceColor','c'), hold on,
-plot(xCirsium,yCirsium,'rv','MarkerFaceColor','r'), hold on,
+plot(xThistle,yThistle,'rv','MarkerFaceColor','r'), hold on,
 xlabel('First Principal Component');
 ylabel('Second Principal Component');
 title('Principal Component Scatter Plot');
@@ -206,15 +219,15 @@ legend('Acacia','Linden','Lavender','Canola','Thistle',...
 figure
 plot3(xAcacia,yAcacia,zAcacia,'bo','MarkerFaceColor','b'), hold on,
 plot3(xTilia,yTilia,zTilia,'g^','MarkerFaceColor','g'), hold on,
-plot3(xLavandulaAngustifolia,yLavandulaAngustifolia,zLavandulaAngustifolia,'m>','MarkerFaceColor','m'), hold on
+plot3(xLavender,yLavender,zLavender,'m>','MarkerFaceColor','m'), hold on
 %plot3(xBrassica,yBrassica,zBrassica,'ks','MarkerFaceColor','y'), hold on,
 plot3(xBrassica,yBrassica,zBrassica,'cs','MarkerFaceColor','c'), hold on,
-plot3(xCirsium,yCirsium,zCirsium,'rv','MarkerFaceColor','r'), hold on,
+plot3(xThistle,yThistle,zThistle,'rv','MarkerFaceColor','r'), hold on,
 xlabel('First Principal Component');
 ylabel('Second Principal Component');
 zlabel('Third Principal Component');
 title('Principal Component Scatter Plot');
-legend('Acacia','Linden','Lavender','Rapeseed','Thistle',...
+legend('Acacia','Linden','Lavender','Canola','Thistle',...
        'Location','NW')
 grid on
 %AZ=105; EL=43; view(AZ,EL)
@@ -444,7 +457,7 @@ xTilia=[];	yTilia=[];	zTilia=[];
 %xLavandulaMultifida=[];     yLavandulaMultifida=[];    zLavandulaMultifida=[];
 xLavandula=[];	yLavandula=[];	zLavandula=[];
 xBrassica=[];   yBrassica=[];   zBrassica=[]; 
-xCirsium=[];    yCirsium=[];    zCirsium=[]; 
+xThistle=[];    yThistle=[];    zThistle=[]; 
 for i=1:nMostri
     if maxP_Index_arr(i)==1, 
         xAcacia=[xAcacia, CurrentScore_arr(i,1)]; 
@@ -463,9 +476,9 @@ for i=1:nMostri
         yBrassica=[yBrassica, CurrentScore_arr(i,2)];         
         zBrassica=[zBrassica, CurrentScore_arr(i,3)];
     elseif maxP_Index_arr(i)==5, 
-        xCirsium=[xCirsium, CurrentScore_arr(i,1)]; 
-        yCirsium=[yCirsium, CurrentScore_arr(i,2)];         
-        zCirsium=[zCirsium, CurrentScore_arr(i,3)];
+        xThistle=[xThistle, CurrentScore_arr(i,1)]; 
+        yThistle=[yThistle, CurrentScore_arr(i,2)];         
+        zThistle=[zThistle, CurrentScore_arr(i,3)];
     end
 end
 
@@ -473,7 +486,7 @@ plot3(xAcacia,yAcacia,zAcacia,'bo','MarkerFaceColor','b'), hold on,
 plot3(xTilia,yTilia,zTilia,'g^','MarkerFaceColor','g'), hold on,
 plot3(xLavandula,yLavandula,zLavandula,'m>','MarkerFaceColor','m'), hold on
 plot3(xBrassica,yBrassica,zBrassica,'cs','MarkerFaceColor','c'), hold on,
-plot3(xCirsium,yCirsium,zCirsium,'rv','MarkerFaceColor','r'), hold on,
+plot3(xThistle,yThistle,zThistle,'rv','MarkerFaceColor','r'), hold on,
 xlabel('First Principal Component');
 ylabel('Second Principal Component');
 zlabel('Third Principal Component');
