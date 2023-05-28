@@ -58,17 +58,19 @@ currentImage=rgb2gray(currentImage);
 %Calculating the 'gray level co-occurence matrix' on each picture with dimension of 1 on horizontal, vertical
 %on 45 and 135 degrees, using method 'graycomatrix'. Extracting the specific features is done with the method
 % 'graycoprops'
-curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1; -1 0; -1 -1]);
+curentGCLM=graycomatrix(currentImage,'NumLevels',8,'Offset',[0 1; -1 1; -1 0; -1 -1]);
+curentGCLM=curentGCLM(:,:,1)+curentGCLM(:,:,2)+curentGCLM(:,:,3)+curentGCLM(:,:,4);
 % curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1; -1 0]);
 %curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1]);
 % curentGCLM=graycomatrix(currentImage,'Offset',[0 1]);
 % currProps=graycoprops(curentGCLM);
 % props=[currProps.Contrast,currProps.Correlation,currProps.Energy,currProps.Homogeneity];
-resizedGCLM=reshape(curentGCLM,[1,8*8*4]);
+resizedGCLM=reshape(curentGCLM,[1,8*8]);
 PollenFeatures=[PollenFeatures;resizedGCLM];
 end
+mapcaplot(PollenFeatures,labels);
 [pc, score, pcvars]=pca(PollenFeatures);
-scores=score(:,1:13);%%При 8 се получават най - добрите резултати //quadratic
+scores=score(:,1:9);%%При 8 се получават най - добрите резултати //quadratic
 %%
 %Функцията 'fitcdiscr' извършва обучение на модела 'md', използвайки квадратичен дискриминантен анализ на 
 %подадените данни от променливата 'PollenFeatures',представляваща признаците: Контраст, Корелация, 

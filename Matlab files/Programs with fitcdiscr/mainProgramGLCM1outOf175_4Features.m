@@ -59,6 +59,7 @@ currentImage=rgb2gray(currentImage);
 %on 45 and 135 degrees, using method 'graycomatrix'. Extracting the specific features is done with the method
 % 'graycoprops'
 curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1; -1 0; -1 -1]);
+% curentGCLM=curentGCLM(:,:,1)+curentGCLM(:,:,2)+curentGCLM(:,:,3)+curentGCLM(:,:,4);
 % curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1; -1 0]);
 %curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1]);
 % curentGCLM=graycomatrix(currentImage,'Offset',[0 1]);

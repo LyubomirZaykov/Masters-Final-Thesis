@@ -52,7 +52,7 @@ for i=1:uniLenght
 currentImage=imread(imageLocations(i));
 inpict=currentImage;  % RGB image
 
-%Определяне на праг за фона на базата на 30х30 пиксела в 4-те ъгълъ на образа 
+%Определяне на праг за фона на базата на 30х30 пиксела в 4-те ъгъла на образа 
 [row,column,color]=size(inpict);
 rowFiltBack=30; columnFiltBack=30; 
 TopLeft=inpict(1:rowFiltBack,1:columnFiltBack,:);
