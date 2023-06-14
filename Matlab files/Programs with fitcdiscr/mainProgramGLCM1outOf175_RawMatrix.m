@@ -65,7 +65,7 @@ curentGCLM=curentGCLM(:,:,1)+curentGCLM(:,:,2)+curentGCLM(:,:,3)+curentGCLM(:,:,
 % curentGCLM=graycomatrix(currentImage,'Offset',[0 1]);
 % currProps=graycoprops(curentGCLM);
 % props=[currProps.Contrast,currProps.Correlation,currProps.Energy,currProps.Homogeneity];
-resizedGCLM=reshape(curentGCLM,[1,8*8*4]);
+resizedGCLM=reshape(curentGCLM,[1,8*8]);
 PollenFeatures=[PollenFeatures;resizedGCLM];
 end
 

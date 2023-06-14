@@ -66,7 +66,6 @@ sMinG=min(grayCorners4(:,:,1),[],'all');
 threshold=sMinG;
 
 currentImage=rgb2gray(currentImage); % Convert image to gray: 0-255
-features=extractLBPFeatures(currentImage);
 inpictGray=currentImage;  % Gray image
 maskG = inpictGray(:,:,:) >=threshold; % look for background regions  
 mask = bwareafilt(maskG,1); % pick the largest object (the background)
@@ -79,7 +78,7 @@ outpictWB(mask(:,:,1)) = 0; % White object on the black background
 % --------- VARIANT 1: "Imbinarize" with 'global' ----------------------------- 
 inpictBW1 = imbinarize(inpictGray,'global'); % convert to Black and White
 TopLeftBW1=inpictBW1(1:rowFiltBack,1:columnFiltBack,:);
-if sum(TopLeftBW1)/(rowFiltBack.*columnFiltBack)<0.25; %Averaged White TopLeft corner
+if sum(TopLeftBW1)/(rowFiltBack.*columnFiltBack)<0.25 %Averaged White TopLeft corner
     inpictBW1=not(inpictBW1);
 end
 
@@ -115,16 +114,16 @@ Feature7=propsBW.Area;
 Feature8=propsBW.Perimeter;
 %%
 % Извличането на характерните признаци
-% props=[Feature1,Feature2,Feature3,Feature4,Feature5,Feature6,Feature7,Feature8];
+props=[Feature1,Feature2,Feature3,Feature4,Feature5,Feature6,Feature7,Feature8];
 % props=[Feature2,Feature3,Feature4,Feature5,Feature6,Feature7,Feature8];
 % props=[Feature1,Feature2,Feature3,Feature4,Feature5,Feature6,Feature7];
 % props=[Feature2,Feature3,Feature4,Feature5,Feature6,Feature7];
 % props=[Feature1,Feature3,Feature4,Feature5,Feature6,Feature7];
 % props=[Feature1,Feature2,Feature3,Feature4,Feature5,Feature6];
-props=[Feature1,Feature2,Feature3,Feature4,Feature5];
+% props=[Feature1,Feature2,Feature3,Feature4,Feature5];
 PollenFeatures=[PollenFeatures;props];
-
 end
+% visualiseShapesProps(labels,PollenFeatures);
 %%
 %Функцията 'fitcdiscr' извършва обучение на модела 'md', използвайки квадратичен дискриминантен анализ на 
 %подадените данни от променливата 'PollenFeatures',представляваща признаците: Контраст, Корелация, 
@@ -140,7 +139,7 @@ PollenFeaturesTest=PollenFeatures(k,:);
 labelTest=labels(k);
 PollenFeaturesLearn=PollenFeatures; PollenFeaturesLearn(k,:)=[];
 labelsL=labels; labelsL(k,:)=[];
-md=fitcdiscr(PollenFeaturesLearn,labelsL,DiscrimType="quadratic");
+md=fitcdiscr(PollenFeaturesLearn,labelsL,DiscrimType="linear");
 
 %%
 %След като е обучен моделът, ще бъде направен опит да предскаже всеки един полен, подавайки му всички признаци,

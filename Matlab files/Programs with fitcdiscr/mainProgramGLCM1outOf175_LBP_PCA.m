@@ -10,8 +10,8 @@ tic
 
 %%
 %Извличане на всички файлове с .jpeg разширение от съответните папки и обединяването им в променливата 'dirs'
-
 %Extract all names of the .jpg images in the current folders and unite them in the variable 'dirs'
+
 acaciaDir=dir('Acacia\*.jpg');
 lavenderDir=dir('Lavender\*.jpg');
 lindenDir=dir('Linden\*.jpg');
@@ -46,8 +46,8 @@ PollenFeatures=[];
 for i=1:uniLenght
 %%
 %Прочитане на снимката, преобразуването ѝ в едноцветна
-
 %Reading the image, convert it to gray 
+
 currentImage=imread(imageLocations(i));
 currentImage=rgb2gray(currentImage);
 % current=imresize(currentImage,[30 30]);
@@ -61,8 +61,18 @@ currentImage=rgb2gray(currentImage);
 features=extractLBPFeatures(currentImage);
 PollenFeatures=[PollenFeatures;features];
 end
+
 [pc, score, pcvars]=pca(PollenFeatures);
-scores=score(:,1:3);%%При 8 се получават най - добрите резултати //quadratic
+% msgfSum=sum(pcvars(1:23));
+% msgf=(pcvars(1:23)/sum(pcvars))*100;
+% pareto(msgf);
+% sum(msgf)
+% currentTitle = [num2str(sum(msgf)),' % от дисперсията, обхванат от първите 30 главни компонента'];
+% title('Процент дисперсия, обхванат от отделните главни компоненти');
+% xlabel('Главен компонент');
+% ylabel('% дисперсия');
+scores=score(:,1:13);%//Най - добър резултат: 23 linearDA
+% visualisePcaData(labels,scores);
 %%
 %Функцията 'fitcdiscr' извършва обучение на модела 'md', използвайки квадратичен дискриминантен анализ на 
 %подадените данни от променливата 'PollenFeatures',представляваща признаците: Контраст, Корелация, 
@@ -90,6 +100,7 @@ md=fitcdiscr(PollenFeaturesLearn,labelsL,DiscrimType="quadratic");
 currentPrediction=md.predict(PollenFeaturesTest);
 predictLabels=[predictLabels; currentPrediction];
 end
+visualiseQdaData(md,PollenFeaturesLearn);
 %%
 % Кастване(силово преобразуване) на получените предсказания в 'string формат в променливата 'predicted'%
 
@@ -106,6 +117,7 @@ SuccessRate=100-(sum(Ibad)/uniLenght)*100
 %Изчисляване и визуализация на 'confusion matrix'
 %Calculation and visualisation of the 'confusion matrix'
 % [confusionmatrix, matrixlabels]=confusionmat(labels,predicted);
+figure()
 cm=confusionchart(labels,predicted);
 %%
 %Край на брояча/ End of timewatch

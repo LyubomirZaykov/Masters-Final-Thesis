@@ -43,6 +43,7 @@ labels=nameExtract(size(dirs,1),dirs)';
 %Празна матрица за съхранението на признаците за класификация
 %Empty matrix for storing features for classification
 PollenFeatures=[];
+offsetArray=[0 1; -1 1; -1 0; -1 -1];
 for i=1:uniLenght
 %%
 %Прочитане на снимката, преобразуването ѝ в едноцветна
@@ -58,19 +59,28 @@ currentImage=rgb2gray(currentImage);
 %Calculating the 'gray level co-occurence matrix' on each picture with dimension of 1 on horizontal, vertical
 %on 45 and 135 degrees, using method 'graycomatrix'. Extracting the specific features is done with the method
 % 'graycoprops'
-curentGCLM=graycomatrix(currentImage,'NumLevels',8,'Offset',[0 1; -1 1; -1 0; -1 -1]);
-curentGCLM=curentGCLM(:,:,1)+curentGCLM(:,:,2)+curentGCLM(:,:,3)+curentGCLM(:,:,4);
+curentGCLM=graycomatrix(currentImage,'NumLevels',8,'Offset',offsetArray);
+% curentGCLM=curentGCLM(:,:,1)+curentGCLM(:,:,2)+curentGCLM(:,:,3)+curentGCLM(:,:,4);
 % curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1; -1 0]);
 %curentGCLM=graycomatrix(currentImage,'Offset',[0 1; -1 1]);
 % curentGCLM=graycomatrix(currentImage,'Offset',[0 1]);
 % currProps=graycoprops(curentGCLM);
 % props=[currProps.Contrast,currProps.Correlation,currProps.Energy,currProps.Homogeneity];
-resizedGCLM=reshape(curentGCLM,[1,8*8]);
-PollenFeatures=[PollenFeatures;resizedGCLM];
+reshapedGCLM=reshape(curentGCLM,[1,8*8*4]);
+PollenFeatures=[PollenFeatures;reshapedGCLM];
 end
-mapcaplot(PollenFeatures,labels);
+% mapcaplot(PollenFeatures,labels);
 [pc, score, pcvars]=pca(PollenFeatures);
-scores=score(:,1:9);%%При 8 се получават най - добрите резултати //quadratic
+% msgfSum=sum(pcvars(1:8));
+% msgf=(pcvars(1:8)/sum(pcvars))*100;
+% pareto(msgf);
+% sum(msgf)
+% currentTitle = [num2str(sum(msgf)),' % от дисперсията, обхванат от първите 30 главни компонента'];
+% title('Процент дисперсия, обхванат от отделните главни компоненти');
+% xlabel('Главен компонент');
+% ylabel('% дисперсия');
+scores=score(:,1:8);%%При 8 се получават най - добрите резултати //quadratic
+visualisePcaData(labels,scores);
 %%
 %Функцията 'fitcdiscr' извършва обучение на модела 'md', използвайки квадратичен дискриминантен анализ на 
 %подадените данни от променливата 'PollenFeatures',представляваща признаците: Контраст, Корелация, 
@@ -98,6 +108,7 @@ md=fitcdiscr(PollenFeaturesLearn,labelsL,DiscrimType="quadratic");
 currentPrediction=md.predict(PollenFeaturesTest);
 predictLabels=[predictLabels; currentPrediction];
 end
+visualiseLdaData(md,PollenFeaturesLearn);
 %%
 % Кастване(силово преобразуване) на получените предсказания в 'string формат в променливата 'predicted'%
 
@@ -114,6 +125,7 @@ SuccessRate=100-(sum(Ibad)/uniLenght)*100
 %Изчисляване и визуализация на 'confusion matrix'
 %Calculation and visualisation of the 'confusion matrix'
 % [confusionmatrix, matrixlabels]=confusionmat(labels,predicted);
+figure(4)
 cm=confusionchart(labels,predicted);
 %%
 %Край на брояча/ End of timewatch
